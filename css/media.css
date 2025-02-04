@@ -1,0 +1,128 @@
+@media screen and (max-width: 1200px) {
+    .skills-list__element > *:last-child {
+        flex: 1 1 30%;
+        padding-left: 10px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .logo {
+        font-size: 20px;
+    }
+    .menu-element {
+        margin-left: 10px;
+        margin-right: 50px;
+        font-size: 20px;
+    }
+
+
+    .skills-list__element > *:first-child {
+        max-width: 60px;
+        flex: 1 1 50%;
+    }
+
+    .skills-list__element > *:last-child {
+        flex: 1 1 50%;
+        padding-left: 10px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 26px;
+        width: 32px;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 2;
+    }
+
+    .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #009a58;
+    }
+
+    .line1 {
+        transform-origin: 0 0;
+        transition: transform 0.4s ease-in-out;
+    }
+    .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+    .line3 {
+        transform-origin: 0 0;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    #burger:checked ~ .header-top {
+        transform: translateX(0);
+    }
+
+    #burger:checked ~ .menu-burger .line1 {
+        transform: rotate(45deg);
+    }
+    #burger:checked ~ .menu-burger .line2 {
+        transform: scaleY(0);
+    }
+    #burger:checked ~ .menu-burger .line3 {
+        transform: rotate(-45deg);
+    }
+
+    .header {
+        clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0 100%, 0 0);
+        height: 100%;
+        width: 100%;
+    }
+
+    .header-top {
+        position: fixed;
+        right: -550px;
+        flex-direction: column;
+        width: 50%;
+        height: 100vh;
+        background: #013220;
+        transform: translateX(-50%);
+    }
+
+    .logo {
+        display: block;
+        width: 100%;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-element {
+        margin-right: 0;
+        font-size: 18px;
+    }
+
+    .menu-element__link.home svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .switcher-container {
+        width: 17%;
+    }
+
+    .switcher-wrapper {
+        width: 150px;
+    }
+}

@@ -1,0 +1,351 @@
+:root {
+    --mycolor: #013220;
+    --colorw: rgb(209, 255, 236);
+    --backgroundopacity: rgba(4, 100, 87, 0.6);
+}
+
+.cls {
+    clear: both;
+}
+
+.color {
+    color: var(--mycolor);
+}
+
+a.link {
+    color: #009a58;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+a.underlining {
+    text-decoration: underline;
+}
+
+a.logo:hover {
+    opacity: 70%;
+}
+
+.menu-burger {
+    display: none;
+}
+
+.checkbox {
+    display: none;
+}
+
+.header {
+    position: relative;
+    height: 120vh;
+    bottom: 80px;
+    background: #013220;
+    background-size: cover;
+    clip-path: polygon(100% 0, 100% 70%, 50% 120%, 0 70%, 0 0);
+}
+
+.header-top {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70px;
+    background: var(--backgroundopacity);
+    z-index: 3;
+}
+
+.header-top a.link {
+    color: var(--colorw);
+}
+
+.logo {
+    font-size: 22px;
+    width: 130px;
+    color: var(--colorw);
+    white-space: nowrap;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-element {
+    margin-left: 20px;
+    margin-right: 100px;
+    font-size: 22px;
+}
+
+.menu-element:last-child {
+    margin-right: 0;
+}
+
+.menu-element a.link.active, .menu-element a.link:hover {
+    color: #009a58;
+}
+
+.menu-element__link.home svg {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+}
+
+.switcher {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    width: 80px;
+    padding: 0 2px 0 1px;
+
+    background: #009a58;
+    border-radius: 20px;
+    opacity: 100%;
+
+    transition: opacity 0.2s ease;
+    cursor: pointer;
+}
+
+.switcher:hover {
+    opacity: 90%;
+}
+
+.switcher::before {
+    content: "";
+    width: 35px;
+    height: 32px;
+    background: var(--colorw);
+    position: absolute;
+    left: 42px;
+    z-index: 1;
+    border-radius: 20px;
+    transition: left 0.2s ease-in-out;
+}
+
+#lang:checked + .switcher::before {
+    left: 2px;
+}
+
+#lang:checked + .switcher span:first-child {
+    color: #009a58;
+}
+
+#lang:checked + .switcher span:last-child {
+    color: var(--colorw);
+}
+
+.switcher span {
+    flex: 1 1 50%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    color: #009a58;
+    transition: color 0.2s ease-in-out;
+}
+
+.switcher span:first-child {
+    color: var(--colorw);
+}
+
+#lang {
+    display: none;
+}
+
+.header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    color: var(--colorw);
+}
+
+.header-center__wrapper {
+    width: 100%;
+    padding: 0 0 20px 0;
+    text-align: center;
+    background: var(--backgroundopacity);
+}
+
+.name {
+    font-size: 52px;
+}
+
+.description {
+    display: inline-block;
+    font-size: 22px;
+    width: 495px;
+    white-space: nowrap;
+    border-right: 2px solid #fff;
+    line-height: 1.5em;
+    overflow: hidden;
+    animation: cursor 1s step-end infinite, print-text 2.5s steps(52);
+}
+
+@keyframes cursor {
+    0% {
+        border-color: #fff;
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: #fff;
+    }
+}
+
+@keyframes print-text {
+    from {
+        width: 0;
+    }
+}
+
+
+.about-me {
+    display: flex;
+}
+
+.about-me .left {
+    flex: 1 1 60%;
+}
+
+.about-me__image {
+    width: 295px;
+    margin-left: auto;
+    padding-right: 40px;
+    border-radius: 10px;
+    padding-top: 100px;
+}
+
+.about-me__title {
+    color: var(--mycolor);
+    font-size: 36px;
+    padding-top: 100px;
+}
+
+.about-me__description {
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-right: 100px;
+}
+
+.about-me__description ul {
+    margin-bottom: 20px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.red {
+    color: #9a1010;
+}
+
+.github {
+    font-size: 25px;
+}
+
+.about-me__extra-element {
+    font-size: 18px;
+    color: var(--mycolor);
+}
+
+.second-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects {
+    font-size: 20px;
+}
+
+.skills {
+    padding-top: 70px;
+}
+
+.skills-wrapper {
+    display: flex;  /* Используем флекс-контейнер для размещения навигации и описания */
+    justify-content: space-between;  /* Распределяем их по ширине */
+    gap: 20px;  /* Отступ между колонками */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 70%; /* Уменьшаем ширину, чтобы оставить место для описания */
+}
+
+.skills-list__element {
+    flex: 1 1 calc(33.33% - 20px);  /* 3 элемента в строке с отступами */
+    max-width: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skills-list__element:hover {
+    transform: scale(1.05);
+}
+
+.skills-list__element img {
+    width: 50px;  /* Размер иконок */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.skills-list__title {
+    font-size: 16px;
+    text-align: center;
+}
+
+.skill-card {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 25%; /* Оставляем пространство для карточки с описанием */
+    height: fit-content;
+}
+
+.skill-card__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.skill-card__description {
+    font-size: 16px;
+    color: #555;
+}
+
+.footer {
+    background: #f1eeee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.switcher {
+    display: none;
+}

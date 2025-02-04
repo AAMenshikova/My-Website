@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <title>Сайт визитка</title>
+
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/media.css"/>
+</head>
+<body>
+<input class="checkbox" type="checkbox" name="burger" id="burger"/>
+<label for="burger" class="menu-burger">
+    <span class="Line line1"></span>
+    <span class="Line line2"></span>
+    <span class="Line line3"></span>
+</label>
+<div class="header-top">
+    <a href="../files/Резюме_Меньшикова_Анастасия.pdf" target="_blank" class="link logo block-center">скачать&nbsp;резюме</a>
+
+    <nav class="navigation">
+        <ul class="menu block-center">
+            <li class="menu-element">
+                <a class="link menu-element__link active home" href="#home">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z"/>
+                        <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z"/>
+                    </svg>
+                </a>
+            </li>
+            <li class="menu-element">
+                <a class="link menu-element__link" href="#about-me">обо&nbsp;мне</a>
+            </li>
+            <li class="menu-element">
+                <a class="link menu-element__link" href="#skills">навыки</a>
+            </li>
+            <li class="menu-element">
+                <a class="link menu-element__link" href="#socials">контакты</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="switcher-container">
+        <div class="switcher-wrapper">
+            <input type="checkbox" id="lang" checked/>
+            <label class="switcher" for="lang">
+                <span>rus</span>
+                <span>eng</span>
+            </label>
+        </div>
+    </div>
+
+</div>
+<header class="header" id="home">
+    <div class="header-center">
+        <div class="header-center__wrapper">
+            <h1 class="name">Меньшикова&nbsp;Анастасия</h1>
+            <p class="description">Добрейшего&nbsp;времени&nbsp;суток!&nbsp;Давайте&nbsp;знакомиться&nbsp;:)</p>
+        </div>
+    </div>
+</header>
+
+<section class="about-me" id="about-me">
+    <div class="left">
+        <img src="images/photo_2025-01-24_22-08-22.webp" alt="Здесь должна быть фотография" class="about-me__image">
+    </div>
+    <div class="right color">
+        <h2 class="about-me__title">Меньшикова&nbsp;Анастасия&nbsp;Александровна</h2>
+        <ul class="about-me__description">
+            <li>Я студент 2 курса университета ИТМО, направление - "Информационные системы и технологии".</li>
+            <li>Начала изучение языков программирования в 15 лет. На текущий момент освоила следующие языки: C++,
+                C#, C, SQL, Python.
+            </li>
+            <li>На хорошем уровне разбираюсь в алгоритмах и структурах данных. Выполняла проекты разной сложности на
+                всех вышеперечисленных языках.
+            </li>
+
+            <li>Вот некоторые проекты для ознакомления:</li>
+            <ul>
+                <li>
+                    <span>Проект #1</span>
+                    <span class="bold">--Банкомат--</span>
+                    <span>язык C# (фишки -> (1) реализована гексагональная архитектура, (2) персистентное сохранение данных в базу данных (PostgreSQL)).</span>
+                </li>
+                <li>
+                    <span>Проект #2</span>
+                    <span class="bold">--Файловая система--</span>
+                    <span>язык C# (фишка -> паттерн проектирования цепочка обязанностей).</span>
+                </li>
+                <li>
+                    <span>Проект #3</span>
+                    <span class="bold">--Корпоративная система распределения сообщений--</span>
+                    <span>язык C# (фишки -> (1) паттерн декоратор для фильтрации по уровню важности, логирования и установки статуса «прочитано» для сообщений, (2) возможность отправлять сообщение сразу нескольким адресатам с помощью паттерна компоновщик, (3) возможность менять цвет текста).</span>
+                </li>
+            </ul>
+
+
+            <li class="github">Прилагаю свой GitHub со всеми работами : <a class="link underlining" target="_blank"
+                                                                           href="https://github.com/AAMenshikova">AAMenshikova</a>
+            </li>
+            <li>Свободное время провожу с друзьями, читаю книги (классику и детективы), занимаюсь саморазвитием. Хожу на
+                фитнес и йогу (2 раза в неделю as min, чтобы не check-up-ить себя в будущем). Люблю работать в команде,
+                с индивидуальными проектами тоже хорошо справляюсь.
+            </li>
+
+        </ul>
+
+        <ul class="about-me__extra">
+            <li class="about-me__extra-element">
+                <span class="bold">Дата&nbsp;рождения:</span>
+                <span>22.09.2005</span>
+            </li>
+            <li class="about-me__extra-element">
+                <span class="bold">Адрес:</span>
+                <span>Санкт-Петербург,&nbsp;Россия</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="skills" id="skills">
+    <h2 class="second-title">Навыки</h2>
+    <div class="skills-wrapper">
+        <ul class="skills-list left">
+            <li class="skills-list__element" data-description="Языком C владею хорошо. Работала
+                с файловой системой, указателями, массивами, перегрузкой операторов.">
+                <img src="images/The_C_Programming_Language_logo.svg" alt="C">
+                <span class="skills-list__title">C</span>
+            </li>
+            <li class="skills-list__element" data-description="На языке C++ практиковалась в реализации классических алгоритмов, таких как различного рода сортировки, способы хранения данных (стек, очередь и т.д.) обходы графов и решение различной сложности задач на данные темы.">
+                <img src="images/ISO_C++_Logo.svg" alt="C++">
+                <span class="skills-list__title">C++</span>
+            </li>
+            <li class="skills-list__element" data-description="На языке C# реализовала самые масштабные из своих проектов. Они были на отработку базовых навыков объектно-ориентированного программирования - принципы ООП, SOLID, GRASP, паттерны проектирования (структурные, поведенческие и порождающие) и многослойные архитектуры.">
+                <img src="images/c--4.svg" alt="C#">
+                <span class="skills-list__title">C#</span>
+            </li>
+            <li class="skills-list__element" data-description="Язык Python знаю на среднем уровне. Он стал моим первым языком программирования. С его помощью решала задания ОГЭ и ЕГЭ.">
+                <img src="images/python-4.svg" alt="Python">
+                <span class="skills-list__title">Python</span>
+            </li>
+            <li class="skills-list__element" data-description="SQL начала изучать в этом году. На данном этапе владею базовыми знаниями о работе с базами данных.">
+                <img src="images/microsoft-sql-server-1.svg" alt="SQL">
+                <span class="skills-list__title">SQL</span>
+            </li>
+            <li class="skills-list__element" data-description="Алгоритмы и структуры данных знаю на хорошем уровне. Знакома с оптимизацией кода и о том, как сократить затраты по времени и по памяти с помощью различного рода алгоритмов. Их реализовывала на языке C++.">
+                <span class="skills-list__title bold red">Algorithms & data&nbsp;structures</span>
+            </li>
+            <li class="skills-list__element" data-description="Для меня платформа GitHub стала местом хранения большинства моих проектов. На хорошем уровне работаю с git как через консоль, так и через GitHub.">
+                <img src="images/github-2.svg" alt="Git">
+                <span class="skills-list__title">Git | GitHub</span>
+            </li>
+            <li class="skills-list__element" data-description="На данный момент знаю html на начальном уровне. Начала его изучение из-за того, что загорелась идеей сделать свой сайт-визитку. Хорошо разбираюсь в вёрстке сайта.">
+                <img src="images/html-1.svg" alt="HTML">
+                <span class="skills-list__title">HTML</span>
+            </li>
+            <li class="skills-list__element" data-description="На данный момент знаю css на начальном уровне. Начала его изучение из-за того, что загорелась идеей сделать свой сайт-визитку. Неплохо разбираюсь в стилях и методах для создания красивого сайта.">
+                <img src="images/css-3.svg" alt="CSS">
+                <span class="skills-list__title">CSS</span>
+            </li>
+        </ul>
+        <div class="skill-card right">
+            <div class="skill-card__title">
+                <span class="skill-card__name">Выберите навык, чтобы увидеть его описание.</span>
+            </div>
+            <p class="skill-card__description">Нажмите на один из навыков слева для развёрнутого объяснения опыта работы с ним.</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer" id="socials">
+    <ul class="socials">
+        <li class="social-element">
+            <a href="https://vk.com/menshiikova" target="_blank" class="link social-element__link">VK</a>
+        </li>
+        <li class="social-element">
+            <a href="https://t.me/mnvaa0" target="_blank" class="link social-element__link">Telegram</a>
+        </li>
+    </ul>
+    <p class="footer-about">
+        &copy;&nbsp;Меньшикова&nbsp;Анастасия&nbsp;
+    </p>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
