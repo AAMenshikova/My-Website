@@ -175,12 +175,12 @@ a.logo:hover {
 .description {
     display: inline-block;
     font-size: 22px;
-    width: 495px;
+    width: 340px;
     white-space: nowrap;
     border-right: 2px solid #fff;
     line-height: 1.5em;
     overflow: hidden;
-    animation: cursor 1s step-end infinite, print-text 2.5s steps(52);
+    animation: cursor 1s step-end infinite, print-text 2.5s steps(44);
 }
 
 @keyframes cursor {
