@@ -170,6 +170,27 @@
         width: 40px;
         height: auto;
     }
+    .about-me__title {
+        font-size:18px;
+    }
+    .name {
+        font-size: 20px;
+    }
+    .description {
+        font-size: 18px;
+        width: 276px;
+    }
+    .about-me__description {
+        font-size: 14px;
+        margin-right: 15px;
+    }
+    .github {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .about-me__extra-element {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 400px){
@@ -177,17 +198,17 @@
         font-size: 12px;
     }
     .about-me__title {
-        font-size:12px;
+        font-size:16px;
     }
     .name {
-        font-size: 15px;
+        font-size: 20px;
     }
     .description {
-        font-size: 12px;
+        font-size: 18px;
         width: 276px;
     }
     .about-me__description {
-        font-size: 10px;
+        font-size: 14px;
         margin-right: 15px;
     }
     .github {
