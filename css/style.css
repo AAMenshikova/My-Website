@@ -26,11 +26,7 @@ a.logo:hover {
     opacity: 70%;
 }
 
-.menu-burger {
-    display: none;
-}
-
-.checkbox {
+#burger {
     display: none;
 }
 
@@ -291,13 +287,13 @@ a.logo:hover {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    padding: 10px;
+    padding-top: 10px;
     box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
     transition: transform 0.3s ease;
 }
 
 .skills-list__element:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .skills-list__element img {
@@ -309,6 +305,10 @@ a.logo:hover {
 .skills-list__title {
     font-size: 16px;
     text-align: center;
+}
+
+.algo {
+    flex: 1 1 100%;
 }
 
 .skill-card {
