@@ -1,8 +1,9 @@
-@media screen and (max-width: 1200px) {
-    .skills-list__element > *:last-child {
-        flex: 1 1 30%;
-        padding-left: 10px;
-        font-size: 16px;
+@media screen and (max-width: 1000px){
+    .about-me .left {
+        display: none;
+    }
+    .about-me .right {
+        padding-left: 20px;
     }
 }
 
@@ -16,15 +17,13 @@
         font-size: 20px;
     }
 
-
-    .skills-list__element > *:first-child {
+    .skills-list__element > *:first-child :not(.algo) {
         max-width: 60px;
         flex: 1 1 50%;
     }
 
-    .skills-list__element > *:last-child {
+    .skills-list__element > *:last-child :not(.algo) {
         flex: 1 1 50%;
-        padding-left: 10px;
         font-size: 16px;
     }
 }
@@ -39,7 +38,8 @@
         position: fixed;
         top: 20px;
         right: 20px;
-        z-index: 2;
+        z-index: 100;
+        cursor: pointer;
     }
 
     .line {
@@ -48,81 +48,132 @@
         width: 100%;
         border-radius: 10px;
         background: #009a58;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
 
-    .line1 {
-        transform-origin: 0 0;
-        transition: transform 0.4s ease-in-out;
-    }
-    .line2 {
-        transition: transform 0.2s ease-in-out;
-    }
-    .line3 {
-        transform-origin: 0 0;
-        transition: transform 0.4s ease-in-out;
+    #burger:checked + .menu-burger + .header-top {
+        right: 0;
     }
 
-    #burger {
-        display: none;
+    #burger:checked + .menu-burger .line1 {
+        transform: rotate(45deg) translateY(15px);
     }
-
-    #burger:checked ~ .header-top {
-        transform: translateX(0);
+    #burger:checked + .menu-burger .line2 {
+        opacity: 0;
     }
-
-    #burger:checked ~ .menu-burger .line1 {
-        transform: rotate(45deg);
-    }
-    #burger:checked ~ .menu-burger .line2 {
-        transform: scaleY(0);
-    }
-    #burger:checked ~ .menu-burger .line3 {
-        transform: rotate(-45deg);
-    }
-
-    .header {
-        clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0 100%, 0 0);
-        height: 100%;
-        width: 100%;
+    #burger:checked + .menu-burger .line3 {
+        transform: rotate(-45deg) translateY(-15px);
     }
 
     .header-top {
         position: fixed;
-        right: -550px;
-        flex-direction: column;
-        width: 50%;
+        top: 0;
+        right: -100%; /* Меню скрыто по умолчанию */
+        width: 60%; /* Можно уменьшить или увеличить */
         height: 100vh;
         background: #013220;
-        transform: translateX(-50%);
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transition: right 0.3s ease-in-out;
+    }
+
+    #burger:checked ~ .header-top {
+        right: 0; /* Меню появляется */
     }
 
     .logo {
-        display: block;
-        width: 100%;
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: white;
         text-align: center;
-        white-space: normal;
     }
 
     .menu {
+        display: flex;
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
     }
 
     .menu-element {
+        display: block;
+        font-size: 24px;
+        align-items: center;
+        justify-content: center;
         margin-right: 0;
-        font-size: 18px;
+        margin-left: 0;
     }
 
-    .menu-element__link.home svg {
-        width: 24px;
-        height: 24px;
+    .menu-element a{
+        font-size: 24px;
+        color: white;
+        text-decoration: none;
     }
 
-    .switcher-container {
-        width: 17%;
+    .skills-list__element > *:first-child :not(.algo){
+        max-width: 50px;
+        flex: 1 1 50%;
     }
 
-    .switcher-wrapper {
-        width: 150px;
+    .skills-list__element > *:last-child :not(.algo) {
+        flex: 1 1 50%;
+        font-size: 10px;
+    }
+
+    .algo {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 705px) {
+    .skill-card__name {
+        font-size: 20px;
+    }
+
+    .skills-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Делаем карточку на всю ширину */
+    .skill-card {
+        order: -1;
+        width: 100%;
+        max-width: 90%;
+        text-align: center;
+    }
+
+    /* Навыки теперь располагаются под карточкой */
+    .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .skills-list__element {
+        flex: 1 1 calc(33.33% - 10px);
+        max-width: calc(33.33% - 10px);
+        text-align: center;
+    }
+
+    /* Иконки навыков уменьшаем */
+    .skills-list__element img {
+        width: 40px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .algo {
+        font-size: 20px;
     }
 }
