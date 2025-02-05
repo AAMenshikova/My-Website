@@ -61,3 +61,13 @@ document.querySelectorAll(".skills-list__element").forEach(skill => {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const burgerCheckbox = document.getElementById("burger");
+    const menuLinks = document.querySelectorAll(".menu-element__link");
+
+    menuLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            burgerCheckbox.checked = false; // Закрываем меню при клике на ссылку
+        }, 200);
+    });
+});
